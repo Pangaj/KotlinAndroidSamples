@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shruthi.pangaj.kotlinsample.KSButtonClick">
+    tools:context="com.shruthi.pangaj.kotlinsample.activities.KSButtonClickActivity">
 
     <Button
         android:id="@+id/btn_test"

@@ -3,21 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shruthi.pangaj.kotlinsample.MainActivity">
+    tools:context="com.shruthi.pangaj.kotlinsample.KSMainActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/spacing_20"
         android:layout_marginRight="@dimen/spacing_20"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
 
-    <Button
-        android:layout_marginTop="@dimen/spacing_20"
-        android:id="@+id/btn_button_clicked"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/button_clicked"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_button_clicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:text="@string/button_clicked" />
+
+        <Button
+            android:id="@+id/btn_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:text="@string/recyclerview_sample" />
     </LinearLayout>
 </RelativeLayout>

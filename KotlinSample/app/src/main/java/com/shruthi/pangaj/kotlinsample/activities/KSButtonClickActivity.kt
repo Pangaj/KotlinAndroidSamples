@@ -1,11 +1,12 @@
-package com.shruthi.pangaj.kotlinsample
+package com.shruthi.pangaj.kotlinsample.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.shruthi.pangaj.kotlinsample.R
 
-class KSButtonClick : AppCompatActivity() {
+class KSButtonClickActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ks_activity_button_click)

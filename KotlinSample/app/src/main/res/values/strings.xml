@@ -2,4 +2,5 @@
     <string name="app_name">KotlinSample</string>
     <string name="clicked">Clicked</string>
     <string name="button_clicked">Button Click Action</string>
+    <string name="recyclerview_sample">Recycler view sample</string>
 </resources>
