@@ -24,11 +24,12 @@ class KSRecyclerViewAdapter(arrayList: ArrayList<String>?) : RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(viewGroup: ViewHolder?, position: Int) {
+        println(arrayList?.get(position))
         viewGroup?.ivText?.text = arrayList?.get(position)
     }
 
     override fun getItemCount(): Int {
-        return arrayList!!.size
+        return arrayList?.size as Int
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
