@@ -1,39 +1,42 @@
 package com.shruthi.pangaj.kotlinsample.adapters
 
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
+import com.shruthi.pangaj.kotlinsample.R
 
 /**
  * Created by Pan on 5/31/2017.
  */
 
-class KSRecyclerViewAdapter : RecyclerView.Adapter<KSRecyclerViewAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(p0: ViewGroup?, p1: Int): ViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class KSRecyclerViewAdapter(arrayList : ArrayList<String>) : RecyclerView.Adapter<KSRecyclerViewAdapter.ViewHolder>() {
+    var arrayList: ArrayList<String>? = null
+
+    init {
+        this.arrayList = arrayList
     }
 
-    override fun onBindViewHolder(p0: ViewHolder?, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onCreateViewHolder(viewGroup: ViewGroup?, p1: Int): ViewHolder {
+        val view = LayoutInflater.from(viewGroup?.context).inflate(R.layout.ks_adapter_recyclerview, viewGroup, false)
+        return KSRecyclerViewAdapter.ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(viewGroup: ViewHolder?, p1: Int) {
+        viewGroup?.ivText?.text = arrayList?.get(p1)
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return arrayList!!.size
     }
 
-    protected inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val ivOtherServiceLogo: ImageView = itemView.findViewById(R.id.iv_other_services_logo) as ImageView
-        private val tvOtherServiceName: TextView = itemView.findViewById(R.id.tv_other_service_name) as TextView
-        private val tvOtherServiceChannelNo: TextView = itemView.findViewById(R.id.tv_other_service_channel_no) as TextView
-        private val tvOtherServiceType: TextView = itemView.findViewById(R.id.tv_other_service_type) as TextView
-        private val relative_layout: RelativeLayout = itemView.findViewById(R.id.relative_layout) as RelativeLayout
-        private val view_line: View
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val ivText: TextView = itemView.findViewById(R.id.tv_text) as TextView
 
+        /*private val view_line: View
         init {
             view_line = itemView.findViewById(R.id.view_line)
-        }
+        }*/
     }
 }
