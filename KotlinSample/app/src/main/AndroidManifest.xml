@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KSMainActivity">
+        <activity android:name=".activities.KSMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.KSButtonClickActivity" />
-        <activity android:name=".KS" />
+        <activity android:name=".activities.KSRecyclerViewActivity" />
     </application>
 
 </manifest>

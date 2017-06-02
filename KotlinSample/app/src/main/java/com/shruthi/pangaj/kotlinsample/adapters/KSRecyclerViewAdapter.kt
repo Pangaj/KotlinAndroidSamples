@@ -11,7 +11,7 @@ import com.shruthi.pangaj.kotlinsample.R
  * Created by Pan on 5/31/2017.
  */
 
-class KSRecyclerViewAdapter(arrayList : ArrayList<String>) : RecyclerView.Adapter<KSRecyclerViewAdapter.ViewHolder>() {
+class KSRecyclerViewAdapter(arrayList: ArrayList<String>?) : RecyclerView.Adapter<KSRecyclerViewAdapter.ViewHolder>() {
     var arrayList: ArrayList<String>? = null
 
     init {
@@ -23,8 +23,8 @@ class KSRecyclerViewAdapter(arrayList : ArrayList<String>) : RecyclerView.Adapte
         return KSRecyclerViewAdapter.ViewHolder(view)
     }
 
-    override fun onBindViewHolder(viewGroup: ViewHolder?, p1: Int) {
-        viewGroup?.ivText?.text = arrayList?.get(p1)
+    override fun onBindViewHolder(viewGroup: ViewHolder?, position: Int) {
+        viewGroup?.ivText?.text = arrayList?.get(position)
     }
 
     override fun getItemCount(): Int {

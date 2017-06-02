@@ -15,8 +15,8 @@ class KSMainActivity : android.support.v7.app.AppCompatActivity() {
         val btnRecyclerViewSample = findViewById(com.shruthi.pangaj.kotlinsample.R.id.btn_recycler_view) as android.widget.Button
 
         btnRecyclerViewSample.setOnClickListener {
-            val intent = android.content.Intent(this, KSRecyclerView::class.java)
-            startActivity()
+            val intent = android.content.Intent(this, KSRecyclerViewActivity::class.java)
+            startActivity(intent)
         }
     }
 }
