@@ -2,7 +2,6 @@ package com.shruthi.pangaj.kotlinsample.activities
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import com.shruthi.pangaj.kotlinsample.R
 import com.shruthi.pangaj.kotlinsample.adapters.KSRecyclerViewAdapter
 
@@ -16,14 +15,13 @@ class KSRecyclerViewActivity : android.support.v7.app.AppCompatActivity() {
         setContentView(R.layout.ks_activity_recycler_view)
 
         val rvItems = findViewById(R.id.rv_items) as android.support.v7.widget.RecyclerView
-        var arrayList = ArrayList<String>
-        arrayList.add("")
-        arrayList.add("Pangaj")
-        arrayList.add("Shruthi")
+        val arrayList: ArrayList<String>? = ArrayList()
+        arrayList?.add("Pangaj")
+        arrayList?.add("Shruthi")
 
-        val linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        rvItems.layoutManager = linearLayoutManager
+        rvItems.layoutManager = LinearLayoutManager(this)
         rvItems.adapter = KSRecyclerViewAdapter(arrayList)
+
+//        TODO("Need to add RecyclerView OnClickListener")
     }
 }
