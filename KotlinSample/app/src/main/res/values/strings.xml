@@ -3,4 +3,10 @@
     <string name="clicked">Clicked</string>
     <string name="button_clicked">Button Click Action</string>
     <string name="recyclerview_sample">Recycler view sample</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="Submit">Submit</string>
+    <string name="contains_blank_spaces">Contains blank spaces</string>
+    <string name="is_empty">Is empty</string>
+    <string name="retrofit_sample">Retrofit Sample</string>
+    <string name="need_to_implement_onclicklistener">Wanna implement OnClickListener</string>
 </resources>

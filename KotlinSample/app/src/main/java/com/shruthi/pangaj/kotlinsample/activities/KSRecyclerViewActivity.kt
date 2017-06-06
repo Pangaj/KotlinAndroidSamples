@@ -2,6 +2,7 @@ package com.shruthi.pangaj.kotlinsample.activities
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.Toast
 import com.shruthi.pangaj.kotlinsample.R
 import com.shruthi.pangaj.kotlinsample.adapters.KSRecyclerViewAdapter
 
@@ -21,6 +22,8 @@ class KSRecyclerViewActivity : android.support.v7.app.AppCompatActivity() {
 
         rvItems.layoutManager = LinearLayoutManager(this)
         rvItems.adapter = KSRecyclerViewAdapter(arrayList)
+
+        Toast.makeText(applicationContext, R.string.need_to_implement_onclicklistener, Toast.LENGTH_SHORT).show()
 
 //        TODO("Need to add RecyclerView OnClickListener")
     }
