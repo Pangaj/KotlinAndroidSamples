@@ -5,10 +5,39 @@
     android:layout_height="match_parent"
     tools:context="com.shruthi.pangaj.kotlinsample.activities.KSButtonClickActivity">
 
-    <Button
-        android:id="@+id/btn_test"
+
+    <TextView
+        android:id="@+id/tv_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_above="@+id/rl_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/spacing_20"
+        android:textSize="@dimen/font_20" />
 
+    <RelativeLayout
+        android:id="@+id/rl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/spacing_20"
+        android:layout_marginRight="@dimen/spacing_20">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/enter_text"
+            android:textSize="@dimen/font_20" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:text="@string/Submit" />
+    </RelativeLayout>
 </RelativeLayout>
