@@ -1,6 +1,7 @@
 package com.shruthi.pangaj.kotlinsample.activities
 
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
@@ -13,7 +14,7 @@ import com.shruthi.pangaj.kotlinsample.adapters.LZRecyclerItemClickListener
  * Created by Pan on 5/31/2017.
  */
 
-class KSRecyclerViewActivity : android.support.v7.app.AppCompatActivity() {
+class KSRecyclerViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ks_activity_recycler_view)

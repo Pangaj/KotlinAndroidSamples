@@ -25,6 +25,7 @@ class KSMainActivity : AppCompatActivity() {
         val btnRetrofit = findViewById(R.id.btn_retrofit) as Button
         btnRetrofit.setOnClickListener {
             val intent = Intent(this, KSRetrofitActivity::class.java)
+            startActivity(intent)
         }
     }
 }

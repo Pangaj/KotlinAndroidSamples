@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".activities.KSButtonClickActivity" />
         <activity android:name=".activities.KSRecyclerViewActivity" />
+        <activity android:name=".activities.KSRetrofitActivity" />
     </application>
 
 </manifest>

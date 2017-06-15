@@ -6,9 +6,8 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 
-
 /**
- * Created by pangaj on 13/06/17.
+ * Created by Pan on 6/15/2017.
  */
 
 class KSRecyclerItemClickListener(context: Context, private val mListener: KSRecyclerItemClickListener.OnItemClickListener?) : RecyclerView.OnItemTouchListener {

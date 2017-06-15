@@ -1,5 +1,6 @@
 package com.shruthi.pangaj.kotlinsample.Retrofit
 
+import com.shruthi.pangaj.kotlinsample.models.response.KSSampleResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -16,6 +17,11 @@ import java.util.concurrent.TimeUnit
 
 class KSRetrofit {
 
+    fun getClient(): MEGitApiInterface {
+        val gitApiInterface = getRetrofitClient().create(MEGitApiInterface::class.java)
+        return gitApiInterface
+    }
+
     fun getRetrofitClient(): Retrofit {
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -29,7 +35,7 @@ class KSRetrofit {
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .build()
         val builder = Retrofit.Builder()
-        builder.baseUrl("BaseUrl")
+        builder.baseUrl("http://echo.jsontest.com/")
                 .client(okClient)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
@@ -37,7 +43,7 @@ class KSRetrofit {
     }
 
     public interface MEGitApiInterface {
-        @POST("api/UserProfile/CheckMobilePassword")
-        abstract fun verifyPasswordAPI(@Body `object`: LZVerifyPasswordRequest): Call<LZStringResponse>
+        @POST("key/value/one/two")
+        abstract fun sampleResponse(): Call<KSSampleResponse>
     }
 }

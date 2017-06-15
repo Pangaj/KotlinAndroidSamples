@@ -9,4 +9,5 @@
     <string name="is_empty">Is empty</string>
     <string name="retrofit_sample">Retrofit Sample</string>
     <string name="need_to_implement_onclicklistener">Wanna implement OnClickListener</string>
+    <string name="call_api">Call API</string>
 </resources>
