@@ -4,7 +4,6 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.view.View
 
 
 /**
@@ -34,9 +33,5 @@ class KSRecyclerItemClickListener(context: Context, private val mListener: KSRec
 
     override fun onRequestDisallowInterceptTouchEvent(disallowIntercept: Boolean) {
 
-    }
-
-    interface OnItemClickListener {
-        fun onItemClick(view: View, position: Int)
     }
 }

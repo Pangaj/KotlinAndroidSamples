@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.TextView
 import com.shruthi.pangaj.kotlinsample.R
 import com.shruthi.pangaj.kotlinsample.Retrofit.KSRetrofit
+import com.shruthi.pangaj.kotlinsample.interfaces.KSAPIErrorInterface
+import com.shruthi.pangaj.kotlinsample.models.response.KSJSONErrorParser
 import com.shruthi.pangaj.kotlinsample.models.response.KSSampleResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -50,18 +52,18 @@ class KSRetrofitActivity : AppCompatActivity() {
      * @param response The response
      */
     fun handleAPIError(response: Response<*>, errorType: Int) {
-        LZJSONErrorParser.initInstance().checkError(response, errorType, object : LZAPIErrorInterface() {
+        KSJSONErrorParser().initInstance().checkError(response, errorType, object : KSAPIErrorInterface() {
             fun userUnAuthorisedError() {
                 //do nothing
             }
 
             fun commonError(message: String) {
-                val titleText = getString(R.string.error_title)
-                showAlertDialog(message, LZAlertDialogFragment.TYPE_ERROR)
+//                val titleText = getString(R.string.error_title)
+//                showAlertDialog(message, KSAlertDialogFragment.TYPE_ERROR)
             }
 
             fun generalError() {
-                showAlertDialog(getString(R.string.general_error), LZAlertDialogFragment.TYPE_ERROR)
+//                showAlertDialog(getString(R.string.general_error), KSAlertDialogFragment.TYPE_ERROR)
             }
         })
     }

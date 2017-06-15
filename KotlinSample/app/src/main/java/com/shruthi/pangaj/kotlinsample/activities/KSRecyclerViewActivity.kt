@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
 import com.shruthi.pangaj.kotlinsample.R
+import com.shruthi.pangaj.kotlinsample.adapters.KSRecyclerItemClickListener
 import com.shruthi.pangaj.kotlinsample.adapters.KSRecyclerViewAdapter
-import com.shruthi.pangaj.kotlinsample.adapters.LZRecyclerItemClickListener
 
 
 /**
@@ -29,8 +29,8 @@ class KSRecyclerViewActivity : AppCompatActivity() {
         rvItems.layoutManager = linearLayoutManager
         rvItems.adapter = KSRecyclerViewAdapter(arrayList)
 
-        rvItems.addOnItemTouchListener(LZRecyclerItemClickListener(this,
-                object : LZRecyclerItemClickListener.OnItemClickListener {
+        rvItems.addOnItemTouchListener(KSRecyclerItemClickListener(this,
+                object : KSRecyclerItemClickListener.OnItemClickListener {
                     override fun onItemClick(view: View, position: Int) {
                         Toast.makeText(applicationContext, "Clicked position : " + position, Toast.LENGTH_SHORT).show()
                     }
